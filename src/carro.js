@@ -28,7 +28,9 @@ class Auto
   posicionarAuto(x,y){
     this.matriz[x][y]='*';
   }
- 
+  ingresarPosicionInicial(comando){
+    return comando;
+  }
 }
 
 export default Auto;
