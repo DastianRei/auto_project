@@ -31,6 +31,9 @@ class Auto
   ingresarPosicionInicial(comando){
     return comando;
   }
+  ingresarTamanioTablero(comando){
+    return comando;
+  }
 }
 
 export default Auto;
