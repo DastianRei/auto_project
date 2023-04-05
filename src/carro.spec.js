@@ -6,5 +6,9 @@ describe("Sumar", () => {
       expect(auto.ingresarPosicionInicial("3,2,N")).toEqual("3,2,N");
     });
 
+    it("deberia crear un tablero 3x3", () => {
+        expect(auto.ingresarTamanioTablero("3,3")).toEqual("3,2,N");
+      });
+
   });
   
