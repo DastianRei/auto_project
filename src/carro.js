@@ -21,10 +21,11 @@ class Auto
     {
         for (let j = 0; j < columnas; j++) 
         {
-            this.matriz[i][j] = valorInicial;
+            this.matriz[i][j] = "";
         }
       }
-  }
+  }z
+  
 }
 
 
