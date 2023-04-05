@@ -1,6 +1,7 @@
 class Auto {
-  constructor(x, y) {
+  constructor(x, y,direccion) {
     this.x = x;
     this.y = y;
+    this.direccion=direccion;
   }
 }
