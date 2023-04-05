@@ -8,13 +8,22 @@ class Auto
 
   generarTablero(filas, columnas)
   {
-    let matriz = new Array(filas);
-  for (let i = 0; i < filas; i++) 
-  {
-    matriz[i] = new Array(columnas);
+    this.matriz = new Array(filas);
+    for (let i = 0; i < filas; i++) 
+    {
+        this.matriz[i] = new Array(columnas);
+    }
   }
 
-  return matriz;
+  llenarTablero(filas,columnas)
+  {
+    for (let i = 0; i < filas; i++) 
+    {
+        for (let j = 0; j < columnas; j++) 
+        {
+            this.matriz[i][j] = valorInicial;
+        }
+      }
   }
 }
 
