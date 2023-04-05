@@ -1,3 +1,6 @@
-class Auto{
-    //hola
+class Auto {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 }
