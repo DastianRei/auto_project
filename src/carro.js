@@ -28,6 +28,7 @@ class Auto
   posicionarAuto(x,y){
     this.matriz[x][y]='*';
   }
+ 
 }
 
-
+export default Auto;
