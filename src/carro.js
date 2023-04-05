@@ -21,11 +21,13 @@ class Auto
     {
         for (let j = 0; j < columnas; j++) 
         {
-            this.matriz[i][j] = "";
+            this.matriz[i][j] = "0";
         }
       }
-  }z
-  
+  }
+  posicionarAuto(x,y){
+    this.matriz[x][y]='*';
+  }
 }
 
 
