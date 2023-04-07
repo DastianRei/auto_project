@@ -61,7 +61,9 @@ class Auto
       case "N":
         this.direccion="E";
         break;
-        
+      case "E":
+        this.direccion="S";
+        break; 
     }
   }
   girarIzquierda(){
