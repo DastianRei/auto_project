@@ -12,5 +12,8 @@ describe("Sumar", () => {
       it("deberia avanzar una posicion en Y porque esta en Norte", () => {
         expect(auto.ejecutar("A")).toEqual("3,3,N");
       });  
+      it("deberia de girar a la derecha cambiando la posicion a este debido a que apuntamos al norte", () => {
+        expect(auto.ejecutar("D")).toEqual("3,3,E");
+      }); 
   });
   
