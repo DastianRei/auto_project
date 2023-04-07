@@ -36,5 +36,8 @@ describe("Sumar", () => {
       it("deberia de aumentar una casilla en la posicion X ya que avanzamos con direccion al este", () => {
         expect(auto.ejecutar("A")).toEqual("3,2,E"); 
       })
+      it("deberia de girar a la derecha cambiando la posicion a sur debido a que apuntamos al este", () => {
+        expect(auto.ejecutar("D")).toEqual("3,2,S");
+      });
   });
   
