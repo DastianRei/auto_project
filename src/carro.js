@@ -54,13 +54,22 @@ class Auto
         break;
     }
   }
+  girarIzquierda(){
+    switch(this.direccion) {
+      case "E":
+        this.direccion="N";
+        break;
+    }
+  }
   ejecutar(comando){
     if (comando=="A"){
       this.avanzar();
-
     }
     if(comando=="D"){
       this.girarDerecha();
+    }
+    if(comando=="I"){
+      this.girarIzquierda();
     }
     return this.x+","+this.y+","+this.direccion;
   }
