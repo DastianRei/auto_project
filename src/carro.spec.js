@@ -39,5 +39,8 @@ describe("Sumar", () => {
       it("deberia de girar a la derecha cambiando la posicion a sur debido a que apuntamos al este", () => {
         expect(auto.ejecutar("D")).toEqual("3,2,S");
       });
+      it("deberia de reducir una casilla en la posicion y ya que avanzamos con direccion al sur", () => {
+        expect(auto.ejecutar("A")).toEqual("3,1,S"); 
+      })
   });
   
