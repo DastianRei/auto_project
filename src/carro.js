@@ -59,6 +59,9 @@ class Auto
       case "E":
         this.direccion="N";
         break;
+      case "N":
+        this.direccion="O";
+        break;
     }
   }
   ejecutar(comando){
