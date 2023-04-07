@@ -29,11 +29,27 @@ class Auto
     this.matriz[x][y]='*';
   }
   ingresarPosicionInicial(comando){
+    let cadena = comando.split(',');
+    console.log(cadena)
+    this.x = +cadena[0];
+    this.y = +cadena[1];
+    this.direccion = cadena[2];
     return comando;
   }
   ingresarTamanioTablero(comando){
+    let cadena = comando.split(',');
+    this.generarTablero(+cadena[0],cadena[1]);
     return comando;
   }
+  avanzar(){
+    switch(this.direccion) {
+      case "N":
+        console.log(this.x)
+        this.matriz[this.x][this.y++];
+        break;
+    }
+  }
+  
 }
 
 export default Auto;

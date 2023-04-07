@@ -7,8 +7,10 @@ describe("Sumar", () => {
     });
 
     it("deberia crear un tablero 3x3", () => {
-        expect(auto.ingresarTamanioTablero("3,3")).toEqual("3,3");
+        expect(auto.ingresarTamanioTablero("5,5")).toEqual("5,5");
       });
-
+      it("deberia avanzar una posicion en Y porque esta en Norte", () => {
+        expect(auto.ejecutar("A")).toEqual("3,3,N");
+      });  
   });
   
