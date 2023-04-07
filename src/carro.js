@@ -72,6 +72,9 @@ class Auto
       case "O":
         this.direccion="S";
         break;
+      case "S":
+        this.direccion="E";
+        break;
     }
   }
   ejecutar(comando){
