@@ -66,7 +66,10 @@ class Auto
         break;
       case "S":
         this.direccion="O";
-        break;    
+        break;
+      case "O":
+        this.direccion="N";
+        break;     
     }
   }
   girarIzquierda(){
