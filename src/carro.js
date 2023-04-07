@@ -30,7 +30,6 @@ class Auto
   }
   ingresarPosicionInicial(comando){
     let cadena = comando.split(',');
-    console.log(cadena)
     this.x = +cadena[0];
     this.y = +cadena[1];
     this.direccion = cadena[2];
@@ -44,12 +43,16 @@ class Auto
   avanzar(){
     switch(this.direccion) {
       case "N":
-        console.log(this.x)
         this.matriz[this.x][this.y++];
         break;
     }
   }
-  
+  ejecutar(comando){
+    if (comando=="A"){
+      this.avanzar();
+    }
+    return this.x+","+this.y+","+this.direccion;
+  }
 }
 
 export default Auto;
