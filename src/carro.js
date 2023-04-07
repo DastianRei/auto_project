@@ -45,6 +45,9 @@ class Auto
       case "N":
         this.matriz[this.x][this.y++];
         break;
+      case "O":
+        this.matriz[this.x--][this.y];
+        break;
     }
   }
   girarDerecha(){
@@ -52,6 +55,7 @@ class Auto
       case "N":
         this.direccion="E";
         break;
+        
     }
   }
   girarIzquierda(){
