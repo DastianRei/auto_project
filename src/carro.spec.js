@@ -14,6 +14,9 @@ describe("Sumar", () => {
       });  
       it("deberia de girar a la derecha cambiando la posicion a este debido a que apuntamos al norte", () => {
         expect(auto.ejecutar("D")).toEqual("3,3,E");
-      }); 
+      });
+      it("deberia de girar a la izquiera cambiando la posicion a norte debido a que apuntamos al este", () => {
+        expect(auto.ejecutar("I")).toEqual("3,3,N");
+      });  
   });
   
