@@ -8,6 +8,8 @@ class Auto
 
   generarTablero(filas, columnas)
   {
+    this.filas = filas;
+    this.columnas= columnas;
     this.matriz = new Array(filas);
     for (let i = 0; i < filas; i++) 
     {
@@ -41,20 +43,23 @@ class Auto
     return comando;
   }
   avanzar(){
-    switch(this.direccion) {
-      case "N":
-        this.matriz[this.x][this.y++];
-        break;
-      case "O":
-        this.matriz[this.x--][this.y];
-        break;
-      case "S":
-        this.matriz[this.x][this.y--];
-        break;
-      case "E":
-        this.matriz[this.x++][this.y];
-        break;
+    if(this.x<this.filas && this.y<this.columnas){
+      switch(this.direccion) {
+        case "N":
+          this.matriz[this.x][this.y++];
+          break;
+        case "O":
+          this.matriz[this.x--][this.y];
+          break;
+        case "S":
+          this.matriz[this.x][this.y--];
+          break;
+        case "E":
+          this.matriz[this.x++][this.y];
+          break;
+      }
     }
+
   }
   girarDerecha(){
     switch(this.direccion) {

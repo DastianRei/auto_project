@@ -57,5 +57,8 @@ describe("Sumar", () => {
       it("deberia crear una matriz de 5x5 y poner el auto en una posicion inicial de 1,2 con direccion al norte ejecutar los siguientes comandos ", () => {
         expect(autoNuevo.ejecutarInstrucciones("5,5/1,2,N/IAIAIAIAA")).toEqual("1,3,N");
       });
+      it("deberia crear una matriz de 5x5 y poner el auto en una posicion inicial de 1,2 con direccion al norte ejecutar los siguientes comandos IAIAIAIAAAAAA y fallar porque pasa el tamaño limite de la matriz", () => {
+        expect(autoNuevo.ejecutarInstrucciones("5,5/1,2,N/IAIAIAIAAAAAAA")).toEqual("1,5,N");
+      });
   });
   
