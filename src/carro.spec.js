@@ -54,5 +54,8 @@ describe("Sumar", () => {
       it("deberia de girar a la derecha cambiando la posicion a sur debido a que apuntamos al este y reducir una posicion en Y ya que apuntamos al sur", () => {
         expect(auto.ejecutarComandos("DA")).toEqual("4,0,S");
       });
+      it("deberia crear una matriz de 5x5 y poner el auto en una posicion inicial de 1,2 con direccion al norte ejecutar los siguientes comandos ", () => {
+        expect(auto.ejecutarInstrucciones("5,5/1,2N/IAIAIAIAA")).toEqual("1,3N");
+      });
   });
   
