@@ -49,7 +49,7 @@ describe("Sumar", () => {
         expect(auto.ejecutar("D")).toEqual("3,1,N");
       });
       it("deberia de girar a la derecha cambiando la posicion a este debido a que apuntamos al norte y avanzar en una posicion en X ya que apuntamos al este", () => {
-        expect(auto.ejecutarComandos("DA")).toEqual("3,1,E");
+        expect(auto.ejecutarComandos("DA")).toEqual("4,1,E");
       });
   });
   

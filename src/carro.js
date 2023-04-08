@@ -100,6 +100,12 @@ class Auto
     }
     return this.x+","+this.y+","+this.direccion;
   }
+  ejecutarComandos(comandos){
+    for(let i =0;i<comandos.length;i++){
+      this.ejecutar(comandos[i]);
+    }
+    return this.x+","+this.y+","+this.direccion;
+  }
 }
 
 export default Auto;
