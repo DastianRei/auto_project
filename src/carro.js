@@ -9,9 +9,9 @@ class Auto
   generarTablero(filas, columnas)
   {
     this.filas = filas;
-    this.columnas= columnas;
+    this.columnas=columnas;
     this.matriz = new Array(filas);
-    for (let i = 0; i < filas; i++) 
+    for (let i = 0; i < filas+1; i++) 
     {
         this.matriz[i] = new Array(columnas);
     }
@@ -19,6 +19,7 @@ class Auto
 
   llenarTablero(filas,columnas)
   {
+  
     for (let i = 0; i < filas; i++) 
     {
         for (let j = 0; j < columnas; j++) 
@@ -43,23 +44,29 @@ class Auto
     return comando;
   }
   avanzar(){
-    if(this.x<this.filas && this.y<this.columnas){
       switch(this.direccion) {
         case "N":
+          if(this.y<this.columnas){
           this.matriz[this.x][this.y++];
+          }
           break;
         case "O":
-          this.matriz[this.x--][this.y];
+          if(this.x>0){
+            this.matriz[this.x--][this.y];
+          }
           break;
         case "S":
+          if(this.y>0){
           this.matriz[this.x][this.y--];
+          }
           break;
         case "E":
+          if(this.x<this.filas){
           this.matriz[this.x++][this.y];
+          }
           break;
       }
-    }
-
+    
   }
   girarDerecha(){
     switch(this.direccion) {
