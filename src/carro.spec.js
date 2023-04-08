@@ -51,5 +51,8 @@ describe("Sumar", () => {
       it("deberia de girar a la derecha cambiando la posicion a este debido a que apuntamos al norte y avanzar en una posicion en X ya que apuntamos al este", () => {
         expect(auto.ejecutarComandos("DA")).toEqual("4,1,E");
       });
+      it("deberia de girar a la derecha cambiando la posicion a sur debido a que apuntamos al este y reducir una posicion en Y ya que apuntamos al sur", () => {
+        expect(auto.ejecutarComandos("DA")).toEqual("4,0,S");
+      });
   });
   
