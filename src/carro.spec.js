@@ -1,7 +1,7 @@
 import Auto from "./carro";
 describe("Sumar", () => {
     let auto = new Auto(0,0,'N');
-
+    let autoNuevo = new Auto(0,0,'N');
     it("deberia devolver la posicion inicial del auto", () => {
       expect(auto.ingresarPosicionInicial("3,2,N")).toEqual("3,2,N");
     });
@@ -55,7 +55,7 @@ describe("Sumar", () => {
         expect(auto.ejecutarComandos("DA")).toEqual("4,0,S");
       });
       it("deberia crear una matriz de 5x5 y poner el auto en una posicion inicial de 1,2 con direccion al norte ejecutar los siguientes comandos ", () => {
-        expect(auto.ejecutarInstrucciones("5,5/1,2N/IAIAIAIAA")).toEqual("1,3N");
+        expect(autoNuevo.ejecutarInstrucciones("5,5/1,2,N/IAIAIAIAA")).toEqual("1,3,N");
       });
   });
   

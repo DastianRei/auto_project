@@ -106,6 +106,13 @@ class Auto
     }
     return this.x+","+this.y+","+this.direccion;
   }
+  ejecutarInstrucciones(instrucciones){
+    let comandos = instrucciones.split('/');
+    this.ingresarTamanioTablero(comandos[0]);
+    this.ingresarPosicionInicial(comandos[1]);
+    this.ejecutarComandos(comandos[2]);
+    return this.x+","+this.y+","+this.direccion;
+  }
 }
 
 export default Auto;
