@@ -62,7 +62,7 @@ describe("Sumar", () => {
         expect(autoNuevo.ejecutarInstrucciones("5,5/1,2,N/IAIAIAIAAAAAAA")).toEqual("1,5,N");
       });
       it("deberia crear una matriz de 5x5 y poner el auto en una posicion inicial de 3,3 con direccion al este ejecutar los siguientes comandos AADAADADDA", () => {
-        expect(autoNuevo2.ejecutarInstrucciones("5,5/3,3,E/AADAADADDA")).toEqual("5,1,E");
+        expect(autoNuevo.ejecutarInstrucciones("5,5/3,3,E/AADAADADDA")).toEqual("5,1,E");
       });
   });
   
