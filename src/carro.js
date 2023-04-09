@@ -32,10 +32,10 @@ class Auto
     this.matriz[x][y]='*';
   }
   ingresarPosicionInicial(comando){
-    let cadena = comando.split(',');
+    let cadena = comando.toString().split(',');
     this.x = +cadena[0];
-    this.y = +cadena[1];
-    this.direccion = cadena[2];
+    this.y = +cadena[1][0];
+    this.direccion = cadena[1][1];
     return comando;
   }
   ingresarTamanioTablero(comando){
