@@ -9,20 +9,22 @@
     </style>
   </head>
   <body>
-    <div>
-      <label>COMANDOS</label><br />
-      <input width="500px" height="200px" />
-    </div>
-    <div>
-      <label>Posicion Inicial: </label>
-      <label id="posicion-inicial"></label>
-      <br>
-      <label>Comandos: </label>
-      <label id="comandos"></label>
-      <br>
-      <label>Posicion Final: </label>
-      <label id="posicion-final"></label>
-    </div>
-    <script type="module" src="./src/presenter.js"></script>
+    <form id="formulario">
+      <div>
+        <label>COMANDOS</label><br />
+        <input width="500px" height="200px" />
+      </div>
+      <div id="divPosInicial">
+        <label>Posicion Inicial: </label>
+        <label id="posicion-inicial"></label>
+        <br>
+        <label>Comandos: </label>
+        <label id="comandos"></label>
+        <br>
+        <label>Posicion Final: </label>
+        <label id="posicion-final"></label>
+      </div>
+      <script type="module" src="./src/presenter.js"></script>
+    </form>
   </body>
 </html>
