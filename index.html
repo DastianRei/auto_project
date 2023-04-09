@@ -1,22 +1,19 @@
 <html>
   <head>
-    <style>
-      input {
-        width: 50px;
-        height: 50px;
-        text-align: center;
-      }
-    </style>
+   <link href="bootstrap (1).css" rel="stylesheet">
   </head>
   <body>
+    <div class="container">
     <form id="formulario">
       <div>
         <label>COMANDOS</label><br />
-        <input id="comandos-input" width="500px" height="200px"/>
-        <input type=submit value="ejecutar">
+        <textarea cols="50" id="comandos-input" width="500px" height="200px" ></textarea>
+       
       </div>
+      <br>
+      <button type=submit value="ejecutar" class="btn btn-success">EJECUTAR</button>
     </form>
-    <label>Posicion Inicial: </label>
+    <label class="mb-0">Posicion Inicial: </label>
     <label id="posicion-inicial"></label>
     <br>
     <label>Comandos: </label>
@@ -24,6 +21,7 @@
     <br>
     <label>Posicion Final: </label>
     <label id="posicion-final"></label>
+  </div>
   </body>
   <script type="module" src="./src/presenter.js"></script>
 </html>
