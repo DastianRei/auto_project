@@ -3,12 +3,11 @@ import Auto from "./carro";
 const div=document.querySelector("#divPosInicial");
 const form=document.querySelector("#formulario");
 const posInicial=document.querySelector("#posicion-inicial")
-const comandos=document.querySelector("#comandos")
+const comandos=document.querySelector("#comandos-input")
 const posFinal=document.querySelector("#posicion-final")
+let auto=new Auto(0,0,"N");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  //ceceecce
+  div.innerHTML = "<p>" + auto.ingresarPosicionInicial(comandos) + "</p>";
 });

@@ -12,19 +12,24 @@
     <form id="formulario">
       <div>
         <label>COMANDOS</label><br />
-        <input width="500px" height="200px" />
+        <input id="comandos-input" width="500px" height="200px"/>
+        <input type=submit value="ejecutar">
       </div>
+    </form>
       <div id="divPosInicial">
-        <label>Posicion Inicial: </label>
+        <!-- <label>Posicion Inicial: </label>
         <label id="posicion-inicial"></label>
-        <br>
+        <br> -->
+      </div>
+      <div>
         <label>Comandos: </label>
         <label id="comandos"></label>
         <br>
         <label>Posicion Final: </label>
         <label id="posicion-final"></label>
       </div>
-      <script type="module" src="./src/presenter.js"></script>
-    </form>
+      
+    
   </body>
+  <script type="module" src="./src/presenter.js"></script>
 </html>
