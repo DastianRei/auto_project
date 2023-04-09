@@ -1,12 +1,14 @@
-import sumar from "./sumador";
+import Auto from "./carro";
 
-const first = document.querySelector("#primer-numero");
 const div=document.querySelector("#divPosInicial");
+const form=document.querySelector("#formulario");
+const posInicial=document.querySelector("#posicion-inicial")
+const comandos=document.querySelector("#comandos")
+const posFinal=document.querySelector("#posicion-final")
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  
 
   div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
 });
