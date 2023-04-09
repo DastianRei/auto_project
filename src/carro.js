@@ -17,20 +17,6 @@ class Auto
     }
   }
 
-  llenarTablero(filas,columnas)
-  {
-  
-    for (let i = 0; i < filas; i++) 
-    {
-        for (let j = 0; j < columnas; j++) 
-        {
-            this.matriz[i][j] = "0";
-        }
-      }
-  }
-  posicionarAuto(x,y){
-    this.matriz[x][y]='*';
-  }
   ingresarPosicionInicial(comando){
     let cadena = comando.toString().split(',');
     this.x = +cadena[0];
@@ -66,7 +52,6 @@ class Auto
           }
           break;
       }
-    
   }
   girarDerecha(){
     switch(this.direccion) {
