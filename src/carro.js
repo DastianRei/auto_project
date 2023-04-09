@@ -34,24 +34,16 @@ class Auto
   avanzar(){
       switch(this.direccion) {
         case "N":
-          if(this.y<this.columnas){
-          this.matriz[this.x][this.y++];
-          }
+          if(this.y<this.columnas) this.matriz[this.x][this.y++];
           break;
         case "O":
-          if(this.x>0){
-            this.matriz[this.x--][this.y];
-          }
+          if(this.x>0) this.matriz[this.x--][this.y];   
           break;
         case "S":
-          if(this.y>0){
-          this.matriz[this.x][this.y--];
-          }
+          if(this.y>0) this.matriz[this.x][this.y--];
           break;
         case "E":
-          if(this.x<this.filas){
-          this.matriz[this.x++][this.y];
-          }
+          if(this.x<this.filas)this.matriz[this.x++][this.y];
           break;
       }
   }
@@ -88,15 +80,9 @@ class Auto
     }
   }
   ejecutar(comando){
-    if (comando=="A"){
-      this.avanzar();
-    }
-    if(comando=="D"){
-      this.girarDerecha();
-    }
-    if(comando=="I"){
-      this.girarIzquierda();
-    }
+    if (comando=="A") this.avanzar();
+    if(comando=="D")this.girarDerecha();
+    if(comando=="I")this.girarIzquierda();
     return this.x+","+this.y+this.direccion;
   }
   ejecutarComandos(comandos){
