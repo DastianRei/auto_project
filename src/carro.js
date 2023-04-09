@@ -16,12 +16,14 @@ class Auto
         this.matriz[i] = new Array(columnas);
     }
   }
-
-  ingresarPosicionInicial(comando){
-    let cadena = comando.toString().split(',');
+  asignarValores(cadena){
     this.x = +cadena[0];
     this.y = +cadena[1][0];
     this.direccion = cadena[1][1];
+  }
+  ingresarPosicionInicial(comando){
+    let cadena = comando.toString().split(',');
+    this.asignarValores(cadena);
     return comando;
   }
   ingresarTamanioTablero(comando){
