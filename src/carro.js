@@ -110,20 +110,20 @@ class Auto
     if(comando=="I"){
       this.girarIzquierda();
     }
-    return this.x+","+this.y+","+this.direccion;
+    return this.x+","+this.y+this.direccion;
   }
   ejecutarComandos(comandos){
     for(let i =0;i<comandos.length;i++){
       this.ejecutar(comandos[i]);
     }
-    return this.x+","+this.y+","+this.direccion;
+    return this.x+","+this.y+this.direccion;
   }
   ejecutarInstrucciones(instrucciones){
     let comandos = instrucciones.split('/');
     this.ingresarTamanioTablero(comandos[0]);
     this.ingresarPosicionInicial(comandos[1]);
     this.ejecutarComandos(comandos[2]);
-    return this.x+","+this.y+","+this.direccion;
+    return this.x+","+this.y+this.direccion;
   }
 }
 

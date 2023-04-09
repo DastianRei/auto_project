@@ -9,5 +9,5 @@ let auto=new Auto(0,0,"N");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   //ceceecce
-  div.innerHTML = "<p>" + auto.ingresarPosicionInicial(comandos.value) + "</p>";
+  div.innerHTML = "<p>" + auto.ejecutarInstrucciones("5,5/3,3E/AADAADADDA") + "</p>";
 });
