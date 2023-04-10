@@ -17,9 +17,14 @@ class Auto
     }
   }
   asignarValores(cadena){
+    try{
     this.x = +cadena[0];
     this.y = +cadena[1][0];
     this.direccion = cadena[1][1];
+  }
+    catch{
+      alert('Formao de la posicion inicial invalido');
+    }
   }
   ingresarPosicionInicial(comando){
     let cadena = comando.toString().split(',');
@@ -27,9 +32,13 @@ class Auto
     return comando;
   }
   ingresarTamanioTablero(comando){
+    try{
     let cadena = comando.split(',');
     this.generarTablero(+cadena[0],cadena[1]);
-    return comando;
+    return comando;}
+    catch{
+      alert('Tamaño matriz en formato invalido');
+    }
   }
   avanzar(){
       switch(this.direccion) {
