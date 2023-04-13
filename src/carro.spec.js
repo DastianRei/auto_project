@@ -97,5 +97,10 @@ describe("Sumar", () => {
       it("verificar que el auto se detiene en el limite en caso de seguir avanzando hacia la izquierda en X", () => {
          expect(autoNuevo.ejecutarInstrucciones("5,5/1,2O/AAAAAAAA")).toEqual("0,2O");
          });  
+         it("Creamos un auto con posicion inicial en 1,2N y con un tamaño de matriz de 5x5 ejecutando el comando Jump que deberia devolver 1,4N", () => {
+          let autoJump = new Auto(1,2,'N');
+          autoJump.ingresarTamanioTablero(t)
+          expect(autoJump.ejecutar('J')).toEqual("1,4N");
+          });  
   });
   
