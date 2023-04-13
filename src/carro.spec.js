@@ -101,6 +101,11 @@ describe("Sumar", () => {
         let auto3=new Auto(0,0,"N")
         auto3.ingresarTamanioTablero(t);
           expect(auto3.ejecutar("J")).toEqual("0,2N");
+          });
+      it("si el comando es J deberia avanzar 2 posiciones en la direccion en la que esta mirando el auto", () => {
+          let auto3=new Auto(0,0,"E")
+          auto3.ingresarTamanioTablero(t);
+          expect(auto3.ejecutar("J")).toEqual("2,0E");
           }); 
   });
   

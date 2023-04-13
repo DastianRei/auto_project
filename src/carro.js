@@ -95,6 +95,11 @@ class Auto
       case "N":
         this.y=this.y+2;
         this.matriz[this.x][this.y];
+        break;
+      case "E":
+        this.x=this.x+2;
+        this.matriz[this.x][this.y];
+        break;
     }
   }
   ejecutar(comando){
