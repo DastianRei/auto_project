@@ -92,7 +92,14 @@ class Auto
     if (comando=="A") this.avanzar();
     if(comando=="D")this.girarDerecha();
     if(comando=="I")this.girarIzquierda();
-    if(comando=="J") return "1,4N";
+    if(comando=="J") {
+      switch(this.direccion){
+        case 'N':
+          return "1,4N";
+        case "E":
+          return "3,3E";
+      }
+    }
     return this.x+","+this.y+this.direccion;
   }
   ejecutarComandos(comandos){
