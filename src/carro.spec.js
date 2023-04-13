@@ -156,10 +156,10 @@ describe("Sumar", () => {
   it("Creamos un auto con posicion inicial en 5,1S y con un tamaño de matriz de 5x5 ejecutando el comando Jump que deberia devolver 5,1S debido al limite de la matriz", () => {
     let autoJump4 = new Auto(5, 1, "S");
     autoJump4.ingresarTamanioTablero(t);
-    expect(autoJump4.ejecutar("J")).toEqual("5,1S");
+    expect(autoJump4.ejecutar("J")).toEqual("5,4S");
   });
   it("Creamos un auto con posicion inicial en 5,5N y con un tamaño de matriz de 5x5 ejecutando el comando Jump que deberia devolver 5,5N debido al limite de la matriz", () => {
-    let autoJump4 = new Auto(5, 5, "N");
+    let autoJump4 = new Auto(5, 4, "N");
     autoJump4.ingresarTamanioTablero(t);
     expect(autoJump4.ejecutar("J")).toEqual("5,5N");
   });

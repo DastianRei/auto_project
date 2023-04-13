@@ -91,7 +91,11 @@ class Auto {
     if (comando == "J") {
       switch (this.direccion) {
         case "N":
-          this.matriz[this.x][(this.y += 2)];
+          let tamYN = this.y;
+  
+          if ((tamYN +=1 < this.columnas)) {
+            this.matriz[this.x][(this.y += 2)];
+          }
           break;
         case "E":
           this.matriz[(this.x += 2)][this.y];
@@ -100,9 +104,12 @@ class Auto {
           this.matriz[(this.x -= 2)][this.y];
           break;
         case "S":
-          let tamY= this.y;
-          if (tamY-=1 > 0) {
+          let tamYS = this.y;
+          if ((tamYS  > 0)) {
             this.matriz[this.x][(this.y -= 2)];
+          }
+          else{
+            this.y = this.columnas + this.y;
           }
           break;
       }
