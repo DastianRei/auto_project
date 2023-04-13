@@ -100,6 +100,9 @@ class Auto
         case "E":
           this.matriz[this.x+=2][this.y];
           break;
+        case "O":
+          this.matriz[this.x-=2][this.y];
+          break;
       }
     }
     return this.x+","+this.y+this.direccion;
