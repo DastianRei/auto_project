@@ -138,9 +138,14 @@ describe("Sumar", () => {
     autoJump3.ingresarTamanioTablero(t);
     expect(autoJump3.ejecutar("J")).toEqual("3,1E");
   });
-  it("Creamos un auto con posicion inicial en 3,1O y con un tamaño de matriz de 5x5 ejecutando el comando Jump que deberia devolver 1,1E", () => {
+  it("Creamos un auto con posicion inicial en 3,1O y con un tamaño de matriz de 5x5 ejecutando el comando Jump que deberia devolver 1,1O", () => {
     let autoJump3 = new Auto(3, 1, "O");
     autoJump3.ingresarTamanioTablero(t);
     expect(autoJump3.ejecutar("J")).toEqual("1,1O");
+  });
+  it("Creamos un auto con posicion inicial en 5,1O y con un tamaño de matriz de 5x5 ejecutando el comando Jump que deberia devolver 3,1O", () => {
+    let autoJump4 = new Auto(5, 1, "O");
+    autoJump4.ingresarTamanioTablero(t);
+    expect(autoJump4.ejecutar("J")).toEqual("3,1O");
   });
 });
