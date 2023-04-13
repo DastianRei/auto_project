@@ -123,11 +123,17 @@ class Auto
             this.y=this.columnas;
           }
         }
-        //this.y=this.y-2;
         this.matriz[this.x][this.y];
         break;
       case "O":
-        this.x=this.x-2;
+        for(let i=0;i<2;i++)
+        {
+          this.x--;
+          if(this.x<0)
+          {
+            this.x=this.filas;
+          }
+        }
         this.matriz[this.x][this.y];
         break; 
     }
