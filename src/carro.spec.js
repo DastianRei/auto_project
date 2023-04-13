@@ -117,5 +117,10 @@ describe("Sumar", () => {
           auto3.ingresarTamanioTablero(t);
           expect(auto3.ejecutar("J")).toEqual("0,0O");
           }); 
+      it("si el comando es J y el auto mirando al norte toca el limite deberia empezar su posicion Y en 0 y seguir el salto de 2 en 2", () => {
+         let auto3=new Auto(0,5,"N")
+         auto3.ingresarTamanioTablero(t);
+         expect(auto3.ejecutar("J")).toEqual("0,1N");
+         });
   });
   

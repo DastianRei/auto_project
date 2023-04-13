@@ -93,7 +93,14 @@ class Auto
     switch(this.direccion)
     {
       case "N":
-        this.y=this.y+2;
+        for(let i=0;i<2;i++)
+        {
+          this.y++;
+          if(this.y>this.columnas)
+          {
+            this.y=0;
+          }
+        }
         this.matriz[this.x][this.y];
         break;
       case "E":
