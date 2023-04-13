@@ -92,6 +92,7 @@ class Auto
     if (comando=="A") this.avanzar();
     if(comando=="D")this.girarDerecha();
     if(comando=="I")this.girarIzquierda();
+    if(comando=="J") return "1,4N";
     return this.x+","+this.y+this.direccion;
   }
   ejecutarComandos(comandos){
