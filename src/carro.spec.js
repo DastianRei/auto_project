@@ -111,6 +111,11 @@ describe("Sumar", () => {
            let auto3=new Auto(0,2,"S")
            auto3.ingresarTamanioTablero(t);
            expect(auto3.ejecutar("J")).toEqual("0,0S");
-           }); 
+           });
+      it("si el comando es J deberia avanzar 2 posiciones en la direccion en la que esta mirando el auto que es Oeste", () => {
+          let auto3=new Auto(2,0,"O")
+          auto3.ingresarTamanioTablero(t);
+          expect(auto3.ejecutar("J")).toEqual("0,0O");
+          }); 
   });
   

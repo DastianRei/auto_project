@@ -104,7 +104,10 @@ class Auto
         this.y=this.y-2;
         this.matriz[this.x][this.y];
         break;
-      
+      case "O":
+        this.x=this.x-2;
+        this.matriz[this.x][this.y];
+        break; 
     }
   }
   ejecutar(comando){
