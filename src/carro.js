@@ -98,7 +98,8 @@ class Auto
           this.matriz[this.x][this.y+=2];
           break;
         case "E":
-          return "3,3E";
+          this.matriz[this.x+=2][this.y];
+          break;
       }
     }
     return this.x+","+this.y+this.direccion;
