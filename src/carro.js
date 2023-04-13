@@ -115,7 +115,15 @@ class Auto
         this.matriz[this.x][this.y];
         break;
       case "S":
-        this.y=this.y-2;
+        for(let i=0;i<2;i++)
+        {
+          this.y--;
+          if(this.y<0)
+          {
+            this.y=this.columnas;
+          }
+        }
+        //this.y=this.y-2;
         this.matriz[this.x][this.y];
         break;
       case "O":
