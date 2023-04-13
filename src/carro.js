@@ -40,15 +40,27 @@ class Auto {
     switch (this.direccion) {
       case "N":
         if (this.y < this.columnas) this.matriz[this.x][this.y++];
+        else{
+          this.y = 0;
+        }
         break;
       case "O":
         if (this.x > 0) this.matriz[this.x--][this.y];
+        else{
+          this.x = this.filas;
+        }
         break;
       case "S":
         if (this.y > 0) this.matriz[this.x][this.y--];
+        else{
+          this.y = this.columnas;
+        }
         break;
       case "E":
         if (this.x < this.filas) this.matriz[this.x++][this.y];
+        else{
+          this.x = 0;
+        }
         break;
     }
   }
@@ -92,24 +104,34 @@ class Auto {
       switch (this.direccion) {
         case "N":
           let tamYN = this.y;
-  
-          if ((tamYN +=1 < this.columnas)) {
+          if ((tamYN += 1 < this.columnas)) {
             this.matriz[this.x][(this.y += 2)];
+          } else if (this.y > this.columnas) {
+            this.y = 0 + +this.y;
           }
           break;
         case "E":
-          this.matriz[(this.x += 2)][this.y];
+          let tamXE = this.x;
+          if ((tamXE += 1 < this.filas)) {
+            this.matriz[(this.x += 2)][this.y];
+          } else {
+            this.x = 0 + +this.x;
+          }
           break;
         case "O":
-          this.matriz[(this.x -= 2)][this.y];
+          let tamXO = this.x;
+          if ((tamXO -= 1 > 0)) {
+            this.matriz[(this.x -= 2)][this.y];
+          } else {
+            this.x = +this.filas - +this.x;
+          }
           break;
         case "S":
           let tamYS = this.y;
-          if ((tamYS  > 0)) {
+          if ((tamYS -= 1 > 0)) {
             this.matriz[this.x][(this.y -= 2)];
-          }
-          else{
-            this.y = this.columnas + this.y;
+          } else {
+            this.y = +this.columnas - +this.y;
           }
           break;
       }
