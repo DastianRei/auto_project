@@ -100,7 +100,10 @@ class Auto {
           this.matriz[(this.x -= 2)][this.y];
           break;
         case "S":
-          this.matriz[this.x][(this.y -= 2)];
+          let tamY= this.y;
+          if (tamY-=1 > 0) {
+            this.matriz[this.x][(this.y -= 2)];
+          }
           break;
       }
     }
