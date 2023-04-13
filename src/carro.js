@@ -95,7 +95,8 @@ class Auto
     if(comando=="J") {
       switch(this.direccion){
         case 'N':
-          return "1,4N";
+          this.matriz[this.x][this.y+=2];
+          break;
         case "E":
           return "3,3E";
       }
