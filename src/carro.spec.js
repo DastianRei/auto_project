@@ -122,5 +122,10 @@ describe("Sumar", () => {
          auto3.ingresarTamanioTablero(t);
          expect(auto3.ejecutar("J")).toEqual("0,1N");
          });
+      it("si el comando es J y el auto mirando al este toca el limite deberia empezar su posicion X en 0 y seguir el salto de 2 en 2", () => {
+        let auto3=new Auto(5,0,"E")
+        auto3.ingresarTamanioTablero(t);
+        expect(auto3.ejecutar("J")).toEqual("1,0E");
+        });
   });
   

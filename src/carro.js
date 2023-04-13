@@ -104,7 +104,14 @@ class Auto
         this.matriz[this.x][this.y];
         break;
       case "E":
-        this.x=this.x+2;
+        for(let i=0;i<2;i++)
+        {
+          this.x++;
+          if(this.x>this.filas)
+          {
+            this.x=0;
+          }
+        }
         this.matriz[this.x][this.y];
         break;
       case "S":
