@@ -88,10 +88,20 @@ class Auto
         break;
     }
   }
+  saltar()
+  {
+    switch(this.direccion)
+    {
+      case "N":
+        this.y=this.y+2;
+        this.matriz[this.x][this.y];
+    }
+  }
   ejecutar(comando){
     if (comando=="A") this.avanzar();
     if(comando=="D")this.girarDerecha();
     if(comando=="I")this.girarIzquierda();
+    if(comando=="J")this.saltar();
     return this.x+","+this.y+this.direccion;
   }
   ejecutarComandos(comandos){

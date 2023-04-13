@@ -97,5 +97,10 @@ describe("Sumar", () => {
       it("verificar que el auto se detiene en el limite en caso de seguir avanzando hacia la izquierda en X", () => {
          expect(autoNuevo.ejecutarInstrucciones("5,5/1,2O/AAAAAAAA")).toEqual("0,2O");
          });  
+      it("si el comando es J deberia avanzar 2 posiciones en la direccion en la que esta mirando el auto", () => {
+        let auto3=new Auto(0,0,"N")
+        auto3.ingresarTamanioTablero(t);
+          expect(auto3.ejecutar("J")).toEqual("0,2N");
+          }); 
   });
   
